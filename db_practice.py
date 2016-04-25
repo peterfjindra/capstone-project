@@ -2,19 +2,22 @@ import psycopg2
 from db_personal import *
 from temp_objects import *
 from getpass import getpass
-
+"""
 passw = getpass("Please enter the password for your postgres account:")
 movie1 = tempMovie("The Lion King", None, None, None, "1994", 95, "PG", 6.0, True, False)
 person = tempPerson("Matthew Broderick", "actor")
 movie2 = tempMovie("Ferris Buellers Day Off", None, None, None, "1986", 103, "PG-13", 8.5, True, True)
 movie3 = tempMovie("Resevoir Dogs", None, None, None, "1992", 99, "R", 9.5, True, True)
-
-#addMovie(movie, passw)
+psycopg2.connect(database="test", user="postgres", password=passw, host="127.0.0.1", port="5432")
+#addMovie(movie1, passw)
 #addMovie(movie2, passw)
 #addMovie(movie3, passw)
 #addPerson(person, passw)
 #addRole(movie2, person, passw)
 #addRole(movie1, person, passw)
+"""
+rating = raw_input(":")
+float(rating)
 """
 portfolio = portfolio(person, passw)
 for movie in portfolio:
